@@ -1,0 +1,102 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About Us | 10X Property Buyers</title><meta name="description" content="About 10X Property Buyers and our approach to direct property purchases."><meta name="theme-color" content="#07192b"><style>
+:root{
+  --navy:#07192b; --navy2:#0c2e4f; --navy3:#123f69;
+  --green:#70bd52; --green2:#4f9638; --green-soft:#eef8ea;
+  --cream:#f7f3eb; --paper:#fff; --ink:#102235; --muted:#657584;
+  --line:#e4e9ee; --shadow:0 20px 60px rgba(7,25,43,.12);
+  --soft-shadow:0 12px 35px rgba(7,25,43,.08); --r:20px; --max:1200px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.62}
+a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(calc(100% - 30px),var(--max));margin:auto}
+.announcement{background:#041322;color:#dce7ef;font-size:.88rem}
+.announcement .wrap{display:flex;justify-content:space-between;gap:20px;padding:9px 0}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(228,233,238,.95)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:44px;height:44px;border-radius:13px;background:var(--navy);display:grid;place-items:center;color:#fff;font-weight:950;letter-spacing:-.08em;box-shadow:var(--soft-shadow)}
+.brand-mark span{color:var(--green)}
+.brand-copy strong{display:block;font-size:1.05rem}.brand-copy small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.08em}
+.links{display:flex;gap:22px;align-items:center;font-weight:850;font-size:.92rem}
+.links a{padding:28px 0;position:relative}
+.links a:after{content:"";position:absolute;left:0;right:0;bottom:18px;height:2px;background:var(--green);transform:scaleX(0);transition:.2s}
+.links a:hover:after,.links a.active:after{transform:scaleX(1)}
+.actions{display:flex;align-items:center;gap:10px}.call{font-weight:850;font-size:.91rem}
+.menu{display:none;border:0;background:#edf2f5;color:var(--navy);padding:10px 13px;border-radius:10px;font-size:1.2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:11px;padding:14px 21px;font-weight:900;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-1px)} .btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green2)}
+.btn-navy{background:var(--navy);color:#fff}.btn-white{background:#fff;color:var(--navy)}.btn-outline{background:transparent;border:1px solid currentColor}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy3))}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(112,189,82,.18),transparent 33%),radial-gradient(circle at 20% 80%,rgba(255,255,255,.07),transparent 28%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center;padding:78px 0}
+.eyebrow{font-size:.77rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:950}
+h1,h2,h3,h4{line-height:1.1;margin:0 0 16px}
+h1{font-size:clamp(3rem,5.4vw,5.25rem);letter-spacing:-.045em}h2{font-size:clamp(2.05rem,3.4vw,3.4rem);letter-spacing:-.03em}h3{font-size:1.35rem}
+.lead{font-size:1.18rem;color:#e4edf4;max-width:680px}
+.hero-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.hero-point{display:flex;align-items:center;gap:10px;font-weight:850;font-size:.91rem}
+.hero-point i{font-style:normal;width:42px;height:42px;border:2px solid var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-note{margin-top:23px;color:#cfdbe4;font-size:.88rem}
+.form-card{background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+.form-card p{color:var(--muted);margin-top:-8px}.field{margin-bottom:12px}.field label{display:block;font-size:.82rem;font-weight:850;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #cbd5dd;border-radius:9px;background:#fff}
+.field textarea{min-height:95px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.small{font-size:.79rem;color:var(--muted)}
+.trust{background:#fff;box-shadow:0 8px 25px rgba(7,25,43,.06)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:20px 0}
+.trust-item{padding:0 23px;border-right:1px solid var(--line)}.trust-item:last-child{border-right:0}.trust-item b{display:block}.trust-item span{font-size:.88rem;color:var(--muted)}
+section{padding:84px 0}.soft{background:#f7f9fa}.cream{background:var(--cream)}.dark{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}.dark p{color:#d9e5ed}
+.section-head{max-width:790px;margin:0 auto 44px;text-align:center}.section-head.left{text-align:left;margin-left:0}.section-head p{color:var(--muted);font-size:1.06rem}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:25px;box-shadow:var(--soft-shadow)}.card p{color:var(--muted)}.hover{transition:.25s}.hover:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.icon{width:56px;height:56px;border-radius:15px;background:var(--green-soft);color:var(--green2);display:grid;place-items:center;font-size:1.45rem;margin-bottom:17px}
+.illustration{background:linear-gradient(180deg,#f9fbfc,#eef4f7);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--soft-shadow)}
+.illustration svg{width:100%;height:auto}.checks{list-style:none;padding:0;margin:22px 0}.checks li{padding:8px 0 8px 29px;position:relative}.checks li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:950}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.step{display:grid;grid-template-columns:70px 1fr;gap:18px;position:relative}.step-icon{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);font-size:1.65rem}.step-no{position:absolute;left:-7px;top:-7px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-size:.8rem;font-weight:900}.step p{color:var(--muted)}
+.compare{overflow:auto;border-radius:16px;box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse;background:#fff;min-width:760px}th,td{padding:18px;border-bottom:1px solid var(--line);text-align:left}th{background:var(--navy);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.stat{background:#fff;border:1px solid var(--line);border-radius:15px;padding:21px;text-align:center}.stat strong{display:block;font-size:1.65rem;color:var(--navy)}
+.area-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.area-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:var(--soft-shadow)}.area-card p{color:var(--muted)}.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.town{background:#eef3f6;padding:7px 10px;border-radius:999px;font-size:.82rem;font-weight:800}
+.map-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center}.map-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.map-chip{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fff;font-weight:850}
+.estimator{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}.estimator-panel{background:#fff;border-radius:20px;padding:27px;box-shadow:var(--shadow)}.range-wrap{margin:22px 0}input[type=range]{width:100%;accent-color:var(--green)}.estimate-box{background:var(--navy);color:#fff;border-radius:17px;padding:25px}.estimate-box strong{display:block;font-size:2.35rem;color:var(--green)}
+.notice{background:var(--cream);border-left:4px solid var(--green);padding:16px;border-radius:10px;color:var(--ink)}
+.faq{border-top:1px solid var(--line)}.faq button{width:100%;padding:20px 0;border:0;background:none;text-align:left;font:inherit;font-weight:900;display:flex;justify-content:space-between;cursor:pointer}.answer{display:none;padding:0 0 18px;color:var(--muted)}.faq.open .answer{display:block}
+.page-hero{background:linear-gradient(120deg,var(--navy),var(--navy3));color:#fff;padding:92px 0;position:relative;overflow:hidden}.page-hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(112,189,82,.1);right:-100px;top:-160px}.page-hero .wrap{position:relative;z-index:2}.page-hero p{max-width:790px;color:#dce7ef;font-size:1.12rem}.breadcrumbs{font-size:.85rem;color:#a9bac8;margin-bottom:20px}
+.cta{background:var(--green);color:#fff;border-radius:23px;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+footer{background:#041527;color:#cbd8e1;padding:58px 0 92px}.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}.foot h4{color:#fff}.foot a{display:block;margin:7px 0}.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:18px;font-size:.86rem}
+.mobile-bar{display:none}
+@media(max-width:1030px){
+ .links{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;flex-direction:column;padding:22px;border-bottom:1px solid var(--line)}.links.open{display:flex}.links a{padding:8px}.links a:after{display:none}.menu{display:block}.call{display:none}
+ .hero-grid,.grid-2,.map-wrap,.estimator{grid-template-columns:1fr}.grid-3,.area-cards,.steps{grid-template-columns:1fr 1fr}.grid-4,.stats,.trust-grid{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+ .wrap{width:min(calc(100% - 22px),var(--max))}.announcement .wrap{justify-content:center;text-align:center}.announcement span:last-child{display:none}.nav{min-height:68px}.links{top:68px}.brand-copy{display:none}.actions .btn{display:none}
+ .hero-grid{padding:50px 0;gap:32px}h1{font-size:2.7rem}h2{font-size:2.08rem}.lead{font-size:1.05rem}.hero-points,.two,.grid-3,.grid-4,.area-cards,.steps,.stats,.trust-grid,.foot,.map-list{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid var(--line);padding:13px 0}.trust-item:last-child{border-bottom:0}
+ section{padding:60px 0}.page-hero{padding:66px 0}.form-card{padding:20px}.cta{display:block;padding:29px}.cta .btn{margin-top:14px}
+ .mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:120;background:#fff;border-top:1px solid var(--line);padding:8px 10px;gap:8px}.mobile-bar a{padding:12px;border-radius:9px;text-align:center;font-weight:900}.mobile-call{background:#eef3f6;color:var(--navy)}.mobile-offer{background:var(--green);color:#fff}
+}
+</style></head><body><div class="announcement"><div class="wrap"><span>Direct property buyers across the South East</span><span>No obligation. No estate agent chain.</span></div></div><header><div class="wrap nav"><a class="brand" href="index.html"><span class="brand-mark">10<span>X</span></span><span class="brand-copy"><strong>10X Property Buyers</strong><small>DIRECT PROPERTY BUYERS</small></span></a><nav class="links"><a class="" href="index.html">Home</a><a class="" href="sell.html">Sell Your Property</a><a class="" href="how.html">How It Works</a><a class="" href="areas.html">Areas We Buy</a><a class="active" href="about.html">About Us</a><a class="" href="faqs.html">FAQs</a><a class="" href="contact.html">Contact</a></nav><div class="actions"><a class="call" href="tel:UPDATE">UPDATE NUMBER</a><a class="btn btn-green" href="contact.html">Get an offer</a><button class="menu">☰</button></div></div></header><main><section class="page-hero"><div class="wrap"><div class="breadcrumbs">Home / About Us</div><div class="eyebrow">About 10X Property Buyers</div><h1>A straightforward approach to buying property</h1><p>We help owners explore a direct sale without pressure, unclear wording or unnecessary delay.</p></div></section>
+<section><div class="wrap grid-2"><div><div class="eyebrow">Our approach</div><h2>Clear enough for sellers. Professional enough for the legal process.</h2><p>Property sales can become difficult when there is a chain, repair work, probate, tenants or a tight timescale. We provide another option by assessing the property directly and explaining the likely process.</p><p>We do not claim a direct sale is right for everyone. Some owners may be better suited to the open market. We believe the best approach is to explain the trade-off clearly so you can make an informed choice.</p></div><div class="illustration"><svg viewBox="0 0 640 470" role="img" aria-label="Illustration of a direct property sale">
+<defs><linearGradient id="g1" x1="0" x2="1"><stop stop-color="#eaf4f8"/><stop offset="1" stop-color="#f7f3eb"/></linearGradient></defs>
+<rect width="640" height="470" rx="26" fill="url(#g1)"/>
+<circle cx="500" cy="90" r="54" fill="#dff0d8"/><circle cx="500" cy="90" r="27" fill="#70bd52"/>
+<path d="M90 310 L290 145 L490 310" fill="#0c2e4f"/><rect x="135" y="295" width="310" height="125" rx="8" fill="#fff"/>
+<rect x="260" y="327" width="70" height="93" fill="#123f69"/><rect x="175" y="325" width="55" height="48" fill="#b9d9ea"/><rect x="350" y="325" width="55" height="48" fill="#b9d9ea"/>
+<path d="M480 260 C535 260 565 290 565 335 C565 380 525 405 478 396" fill="none" stroke="#70bd52" stroke-width="18" stroke-linecap="round"/>
+<circle cx="485" cy="395" r="26" fill="#70bd52"/><path d="M472 395 l10 10 l20 -24" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="66" y="70" width="160" height="74" rx="16" fill="#fff" opacity=".95"/><text x="90" y="104" fill="#07192b" font-family="Arial" font-size="20" font-weight="700">Your property</text><text x="90" y="130" fill="#657584" font-family="Arial" font-size="15">reviewed directly</text>
+</svg></div></div></section>
+<section class="soft"><div class="wrap"><div class="section-head"><div class="eyebrow">What matters to us</div><h2>Principles behind the service</h2></div><div class="grid-3"><div class="card"><div class="icon">💬</div><h3>Clarity</h3><p>We explain what the offer means and what happens next.</p></div><div class="card"><div class="icon">🤝</div><h3>Respect</h3><p>You can take time, ask questions and compare your options.</p></div><div class="card"><div class="icon">✅</div><h3>Delivery</h3><p>Once agreed, we work with solicitors to keep the transaction moving.</p></div></div></div></section>
+<section><div class="wrap"><div class="stats"><div class="stat"><strong>South East</strong><span>Wide regional coverage</span></div><div class="stat"><strong>Direct</strong><span>No onward buyer chain</span></div><div class="stat"><strong>Clear</strong><span>Plain communication</span></div><div class="stat"><strong>Flexible</strong><span>Agreed completion target</span></div></div></div></section>
+<section class="cream"><div class="wrap grid-2"><div><div class="eyebrow">What we will not do</div><h2>No invented claims or false promises</h2><ul class="checks"><li>No fake customer reviews</li><li>No guaranteed completion dates before legal checks</li><li>No claim that a direct offer is always the best option</li><li>No pressure to proceed before taking advice</li></ul></div><div class="card"><h3>Independent advice matters</h3><p>Owners should consider obtaining an estate agent valuation and should use an independent solicitor or licensed conveyancer.</p></div></div></section>
+<section><div class="wrap"><div class="cta"><div><h2>Start with a simple property review</h2><p>Tell us about the property and your preferred timescale.</p></div><a class="btn btn-navy" href="contact.html">Contact us</a></div></div></section></main><footer><div class="wrap"><div class="foot"><div><div class="brand"><span class="brand-mark">10<span>X</span></span><span><strong style="color:white">10X Property Buyers</strong><small style="display:block">DIRECT PROPERTY BUYERS</small></span></div><p>A clear, direct way to sell property across the South East of England.</p></div><div><h4>Sell</h4><a href="sell.html">Sell your property</a><a href="how.html">How it works</a><a href="faqs.html">FAQs</a></div><div><h4>Coverage</h4><a href="areas.html">Areas we buy</a><a href="areas.html">Portsmouth</a><a href="areas.html">Sussex</a><a href="areas.html">Surrey and Kent</a></div><div><h4>Company</h4><a href="about.html">About us</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div><div class="copy">© <span data-year></span> 10X Property Buyers. Initial offers are subject to inspection, legal checks, funding and contract. Consider independent legal advice and an estate agent valuation before selling.</div></div></footer><div class="mobile-bar"><a class="mobile-call" href="tel:UPDATE">Call us</a><a class="mobile-offer" href="contact.html">Get an offer</a></div><script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const b=document.querySelector('.menu'),m=document.querySelector('.links'); if(b&&m)b.onclick=()=>m.classList.toggle('open');
+ document.querySelectorAll('.faq button').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('open'));
+ document.querySelectorAll('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
+ const v=document.querySelector('#propertyValue'),vl=document.querySelector('#propertyValueLabel'),lo=document.querySelector('#directLow'),hi=document.querySelector('#directHigh');
+ const fmt=n=>new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(n);
+ function upd(){if(!v)return;const n=Number(v.value);vl.textContent=fmt(n);lo.textContent=fmt(n*.72);hi.textContent=fmt(n*.85)}
+ if(v){v.oninput=upd;upd()}
+ document.querySelectorAll('form[data-enquiry]').forEach(f=>f.onsubmit=e=>{e.preventDefault();alert('The form is ready to connect. Replace UPDATE EMAIL and UPDATE NUMBER, then connect a form service before launch.');});
+});
+</script></body></html>
