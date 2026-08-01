@@ -1,0 +1,20 @@
+GITHUB UPLOAD - QUICK GUIDE
+
+1. Unzip this folder.
+2. In GitHub, create a new PUBLIC repository called:
+   10x-property-buyers
+3. Press "uploading an existing file".
+4. Drag in ALL files and folders from inside the unzipped folder.
+5. Press "Commit changes".
+6. Go to Settings > Pages.
+7. Choose:
+   Source: Deploy from a branch
+   Branch: main
+   Folder: / (root)
+8. Press Save.
+
+IMPORTANT:
+Before upload, edit:
+assets/js/config.js
+
+Add your real phone number, WhatsApp number and email address.
