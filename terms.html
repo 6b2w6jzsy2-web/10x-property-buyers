@@ -51,7 +51,7 @@ section{padding:86px 0}.soft{background:#f7f9fa}.cream{background:var(--cream)}.
 .area-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:32px;align-items:center}.region-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.region{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--soft)}.region b{display:block}.region span{font-size:.86rem;color:var(--muted)}
 .coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.coverage-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:var(--soft)}.coverage-card p{color:var(--muted)}.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.town{background:#eef3f6;padding:7px 10px;border-radius:999px;font-size:.82rem;font-weight:800}
 .story{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.story:nth-child(even) .story-media{order:2}.story-media{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);min-height:330px}.story-media img{width:100%;height:100%;min-height:330px;object-fit:cover}
-.estimator{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}.estimator-panel{background:#fff;border-radius:20px;padding:27px;box-shadow:var(--shadow)}.range-wrap{margin:22px 0}input[type=range]{width:100%;accent-color:var(--green)}.estimate-box{background:var(--navy);color:#fff;border-radius:17px;padding:25px}.estimate-box strong{display:block;font-size:2.35rem;color:var(--green)}
+
 .notice{background:var(--cream);border-left:4px solid var(--green);padding:16px;border-radius:10px;color:var(--ink)}
 .faq{border-top:1px solid var(--line)}.faq button{width:100%;padding:20px 0;border:0;background:none;text-align:left;font:inherit;font-weight:900;display:flex;justify-content:space-between;cursor:pointer}.answer{display:none;padding:0 0 18px;color:var(--muted)}.faq.open .answer{display:block}
 .page-hero{background:linear-gradient(120deg,var(--navy),var(--navy3));color:#fff;padding:94px 0;position:relative;overflow:hidden}.page-hero:after{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:rgba(112,189,82,.1);right:-100px;top:-165px}.page-hero .wrap{position:relative;z-index:2}.page-hero p{max-width:800px;color:#dce7ef;font-size:1.12rem}.breadcrumbs{font-size:.85rem;color:#a9bac8;margin-bottom:20px}
@@ -60,7 +60,7 @@ footer{background:#041527;color:#cbd8e1;padding:58px 0 92px}.foot{display:grid;g
 .mobile-bar{display:none}
 @media(max-width:1030px){
  .links{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;flex-direction:column;padding:22px;border-bottom:1px solid var(--line)}.links.open{display:flex}.links a{padding:8px}.links a:after{display:none}.menu{display:block}.call{display:none}
- .hero-grid,.grid-2,.story,.area-layout,.estimator{grid-template-columns:1fr}.story:nth-child(even) .story-media{order:0}.grid-3,.coverage-grid,.steps{grid-template-columns:1fr 1fr}.grid-4,.stats,.trust-grid{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr 1fr}
+ .hero-grid,.grid-2,.story,.area-layout.story:nth-child(even) .story-media{order:0}.grid-3,.coverage-grid,.steps{grid-template-columns:1fr 1fr}.grid-4,.stats,.trust-grid{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr 1fr}
 }
 @media(max-width:680px){.brand-logo{width:205px}.footer-logo{width:230px}
  .wrap{width:min(calc(100% - 22px),var(--max))}.topline .wrap{justify-content:center;text-align:center}.topline span:last-child{display:none}.nav{min-height:68px}.links{top:68px}.brand-copy{display:none}.actions .btn{display:none}
@@ -93,10 +93,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  const b=document.querySelector('.menu'),m=document.querySelector('.links'); if(b&&m)b.onclick=()=>m.classList.toggle('open');
  document.querySelectorAll('.faq button').forEach(x=>x.onclick=()=>x.parentElement.classList.toggle('open'));
  document.querySelectorAll('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
- const v=document.querySelector('#propertyValue'),vl=document.querySelector('#propertyValueLabel'),lo=document.querySelector('#directLow'),hi=document.querySelector('#directHigh');
- const fmt=n=>new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(n);
- function upd(){if(!v)return;const n=Number(v.value);vl.textContent=fmt(n);lo.textContent=fmt(n*.72);hi.textContent=fmt(n*.85)}
- if(v){v.oninput=upd;upd()}
+ 
  document.querySelectorAll('form[data-enquiry]').forEach(f=>f.onsubmit=e=>{e.preventDefault();alert('The form is ready to connect. Replace UPDATE EMAIL and UPDATE NUMBER, then connect a form service before launch.');});
 });
 </script></body></html>
